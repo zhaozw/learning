@@ -1,0 +1,64 @@
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:700px) { 
+	.login-well, .register-well {
+		margin-left:35%;
+		margin-right:35%;	
+	}
+
+	.login-well input, .register-well input {
+		margin-bottom:10px !important;
+	}
+	.delete, .update {
+		float:right;
+		margin-top:-15px;
+		cursor:pointer;
+	}
+	.update {
+		margin-right:5px;
+	}
+
+	.blog-entry {
+		margin-left:30%;
+		margin-right:30%;
+		margin-bottom:40px;
+	}
+
+	.blog-posts-area {
+		margin-left:20%;
+		margin-right:20%;
+	}
+}
+
+@media (max-width:400px) { 
+	.login-well, .register-well {
+		margin-left:15%;
+		margin-right:15%;	
+	}
+
+	.login-well input, .register-well input {
+		margin-bottom:10px !important;
+	}
+	.delete, .update {
+		float:right;
+		margin-top:-15px;
+		cursor:pointer;
+	}
+	.update {
+		margin-right:5px;
+	}
+
+	.blog-entry {
+		margin-left:15%;
+		margin-right:15%;
+		margin-bottom:20px;
+	}
+
+	.blog-posts-area {
+		margin-left:5%;
+		margin-right:15%;
+	}
+}
+
+#blogPost input, #blogPost textarea {
+	margin-bottom:10px;
+}

@@ -1,0 +1,13 @@
+<template name="dashboard">
+	{{> navbar}}
+	<div class="blog-entry">
+		<h2 align="center"><strong>课程中心</strong></h2>
+	</div>
+	<div class="blog-posts-area">
+		<ul class="blog-posts">
+			{{#each posts}}
+				{{> post id=id title=title description=description user=user zhang=zhang jie=jie }}
+			{{/each}}
+		</ul>
+	</div>
+</template>
