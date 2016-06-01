@@ -17,8 +17,9 @@ Template.navbar.events({
 		var userId = Meteor.userId();
 		var inputZhang = $('#blog-zhang').val();
 		var inputJie = $('#blog-jie').val();
+		var inputPic="../upload/"+$('#blog-pic').val();
 
-		Meteor.call('createPost', inputTitle, inputVal, userId,inputZhang,inputJie, function(error){
+		Meteor.call('createPost', inputTitle, inputVal, userId,inputZhang,inputJie,inputPic,function(error){
 			if(error){
 				alert("There was an error: " + error);
 			} else {
@@ -26,6 +27,7 @@ Template.navbar.events({
 				$('#blog-title').val("");
 				$('#blog-zhang').val("");
 				$('#blog-jie').val("");
+				$('#blog-pic').val("");
 				FlowRouter.go("/");
 			}
 		});

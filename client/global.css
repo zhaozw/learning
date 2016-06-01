@@ -1,3 +1,38 @@
+
+/* HOME Template */
+
+.documentList
+{
+    overflow-x:auto;
+    overflow-y:hidden;
+    height:300px;
+    width:100%;
+    padding: 0 15px;
+}
+
+.documentItem
+{
+    border:1px solid black;
+    padding:0;
+    height:300px;
+    width: 300px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.documentItem label {
+    font-size: x-small;
+}
+
+.documentItem img
+{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.list-inline {
+    white-space:nowrap;
+}
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (min-width:700px) { 
 	.login-well, .register-well {
@@ -36,7 +71,7 @@
 	}
 
 	.login-well input, .register-well input {
-		margin-bottom:10px !important;
+		margin-bottom:10px;
 	}
 	.delete, .update {
 		float:right;

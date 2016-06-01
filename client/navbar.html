@@ -41,11 +41,13 @@
           <h4 class="modal-title" id="myModalLabel">发布课程</h4>
         </div>
         <div class="modal-body">
+          {{> media }}
           <form id="blogPost" class="input-group">
-            <input class="form-control" id="blog-title" placeholder="课程名称"/>
-            <input class="form-control" id="blog-zhang" placeholder="课程章名"/>
-            <input class="form-control" id="blog-jie" placeholder="课程节名"/>
-            <textarea class="form-control" id="blog-value" placeholder="课程描述" cols="40" rows="20"></textarea>
+            <input class="form-control" id="blog-pic" placeholder="您所上传的文件名（如：i.jpg）"/>
+            <input class="form-control" id="blog-title" placeholder="课程名称(如：语文)"/>
+            <input class="form-control" id="blog-zhang" placeholder="课程章名（如：第一章 冒险）"/>
+            <input class="form-control" id="blog-jie" placeholder="课程节名（如：第一节 开篇）"/>
+            <textarea class="form-control" id="blog-value" placeholder="请输入课程描述" cols="40" rows="20"></textarea>
             <button class="form-control" type="submit">发布</button>
           </form>
         </div>
