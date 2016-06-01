@@ -1,5 +1,5 @@
 {
-  "name": "learning",
+  "name": "社区学习",
   "private": true,
   "scripts": {
     "start": "meteor run"

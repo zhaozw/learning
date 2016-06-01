@@ -23,9 +23,6 @@ kadira:flow-router
 kadira:blaze-layout
 accounts-password
 check
-meteortoys:allthings
-
-crosswalk
 
 #upload
 tomi:upload-server

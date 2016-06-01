@@ -9,7 +9,6 @@ Template.registerHelper("usernameFromId", function (userId){
 
 Template.registerHelper("showDelete", function(post, currentUser){
 	var post = Posts.findOne({title: post.title});
-
 	if(post.user === currentUser._id){
 		return true;
 	} else {

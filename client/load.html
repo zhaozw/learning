@@ -1,14 +1,14 @@
 <template name="media">
-    <div class="container">
-            <div class="panel panel-default">
-            <!-- Default panel contents -->
-           <!-- List group -->
-            <ul class="list-group">
-                <li class="list-group-item">
-                    {{> upload_bootstrap }}
-                </li>
-            </ul>
-        </div>
+    {{> navbar}}
+    <div class="blog-entry">
+        <h2 align="center">上传文件</h2>
+    </div>
+    <div class="panel panel-default">
+        <ul class="list-group">                
+            <li class="list-group-item">
+                {{> upload_bootstrap }}
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -29,4 +29,3 @@
         </ul>
     </div>
 </template>
-

@@ -15,8 +15,9 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/">首页</a></li>
-          {{#if currentUser}}
+          {{#if currentUser.username}}
             <li><a href="#" class="blog" data-toggle="modal" data-target="#myModal">发布</a></li>
+            <li><a href="/admin">上传</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">账户<span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -41,7 +42,6 @@
           <h4 class="modal-title" id="myModalLabel">发布课程</h4>
         </div>
         <div class="modal-body">
-          {{> media }}
           <form id="blogPost" class="input-group">
             <input class="form-control" id="blog-pic" placeholder="您所上传的文件名（如：i.jpg）"/>
             <input class="form-control" id="blog-title" placeholder="课程名称(如：语文)"/>
