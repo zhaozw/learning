@@ -9,7 +9,7 @@ Template.register.events({
 
 		Accounts.createUser(userData, function(error) {
 			if(error) {
-				alert('hey error')
+				alert('请重新输入')
 			} else {
 				FlowRouter.go('/')
 			}

@@ -1,4 +1,4 @@
-Template.dashboard.onCreated(function(){
+Template.grade.onCreated(function(){
 	var self = this;
 	self.autorun(function(){
 		self.subscribe('posts');
@@ -10,7 +10,7 @@ Template.dashboard.onCreated(function(){
 	});
 });
 
-Template.dashboard.helpers({
+Template.grade.helpers({
 	posts: function(){
 		return Posts.find({}, {sort: {timestamp: '-1'}});
 	},

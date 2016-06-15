@@ -13,3 +13,9 @@ Meteor.publish('items', function() {
 Meteor.publish('uploads', function() {
   return Uploads.find();
 });
+Meteor.publish('emotion', function() {
+  return Emotion.find();
+});
+Meteor.publish('grade', function() {
+  return Grade.find();
+});

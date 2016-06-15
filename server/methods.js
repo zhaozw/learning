@@ -1,11 +1,13 @@
 Meteor.methods ({
-	'createPost': function(inputTitle, inputVal, userId,inputZhang,inputJie,inputPic){
+	'createPost': function(inputTitle, inputVal, userId,inputZhang,inputJie,inputPic,inputDoc,inputVideo){
  		check(userId, String);
  		check(inputTitle, String);
  		check(inputVal, String);
     check(inputZhang, String);
     check(inputJie, String);
     check(inputPic,String);
+    check(inputDoc,String);
+    check(inputVideo,String);
 
     Posts.insert({
     	title: inputTitle,
@@ -14,8 +16,45 @@ Meteor.methods ({
       zhang:inputZhang,
       jie:inputJie,
       pic:inputPic,
+      doc:inputDoc,
+      video:inputVideo,
 		 	timestamp: new Date()
 		});
+  },
+  'createEmotion':function(inputClass,inputZhang,inputJie,inputVal,userId){
+      check(userId, String);
+      check(inputClass,String);
+      check(inputVal, String);
+      check(inputZhang, String);
+      check(inputJie, String);
+
+    Emotion.insert({
+      class: inputClass,
+      description: inputVal,
+      user: userId,
+      zhang:inputZhang,
+      jie:inputJie,
+      timestamp: new Date()
+    });
+  },
+  'removeEmotion':function(emotionId){
+      Emotion.remove({_id: emotionId})
+  },
+  'createGrade':function(inputClass,inputZhang,inputJie,inputGrade,userId){
+      check(userId, String);
+      check(inputClass, String);
+      check(inputGrade, String);
+      check(inputZhang, String);
+      check(inputJie, String);
+
+    Grade.insert({
+      class: inputClass,
+      description: inputGrade,
+      user: userId,
+      zhang:inputZhang,
+      jie:inputJie,
+      timestamp: new Date()
+    });
   },
   'removePost': function(postId){
   	Posts.remove({_id: postId})
