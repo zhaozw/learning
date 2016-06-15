@@ -17,8 +17,8 @@ Template.navbar.events({
 		var userId = Meteor.userId();
 		var inputZhang = $('#blog-zhang').val();
 		var inputJie = $('#blog-jie').val();
-		var inputPic="http://127.0.0.1:3000/upload/"+$('#blog-pic').val();
-		var inputDoc="http://127.0.0.1:3000/upload/"+$('#blog-doc').val();
+		var inputPic="http://182.254.152.86:3000/upload/"+$('#blog-pic').val();
+		var inputDoc="http://182.254.152.86:3000/upload/"+$('#blog-doc').val();
 		var inputVideo=$('#blog-video').val();
 
 		Meteor.call('createPost', inputTitle, inputVal, userId,inputZhang,inputJie,inputPic,inputDoc,inputVideo, function(error){
