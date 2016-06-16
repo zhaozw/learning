@@ -5,7 +5,9 @@
 
 ###### 目前展示的只是一款demo，如有需要改进请与我联系
 
-支持iOS/Android/Web
+支持[iOS](https://github.com/YangDejie/learning-ios)/[Android](https://github.com/YangDejie/learning-android)/[Web](https://github.com/YangDejie/learning-server)
+
+Demo:[Web](http://http://182.254.152.86:3000/)/[Android](https://github.com/YangDejie/learning-android/blob/master/release-unsigned.apk?raw=true)
 
 ###目前实现：
 
