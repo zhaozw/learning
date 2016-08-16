@@ -1,0 +1,13 @@
+<template name="admin">
+	{{> mNavbar}}
+	<div class="blog-entry">
+		<h2 align="center">学习平台后台</h2>
+	</div>
+	<div class="blog-posts-area">
+		<ul class="blog-posts">
+			{{#each posts}}
+				{{> poster id=id title=title description=description user=user zhang=zhang jie=jie pic=pic  doc =doc video=video isPic=isPic isDoc=isDoc isVideo=isVideo}}
+			{{/each}}
+		</ul>
+	</div>
+</template>

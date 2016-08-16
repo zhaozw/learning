@@ -1,0 +1,120 @@
+<template name="navbar">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><strong>学习平台</strong></a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">学习资源</a></li>
+          {{#if currentUser.username}}
+          
+            
+            <li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">成绩考核<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                <li><a href="/grade">查看成绩</a></li>
+                  <li><a href="/exam">查看考题</a></li>
+              </ul>
+            </li>
+
+            <li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">学习交流<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                <li><a href="emotion">查看体会</a></li>
+                <li><a href="#" class="blog" data-toggle="modal" data-target="#myEmotion" >书写体会</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">账户管理<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="">{{currentUser.username}}</a></li>
+                <li><a href="" id="logout">退出</a></li>
+              </ul>
+            </li>
+          {{else}}
+            <li><a href="/login">登录</a></li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">发布课程</h4>
+        </div>
+        <div class="modal-body">
+          <form id="blogPost" class="input-group">
+          
+            <input class="form-control" id="blog-title" placeholder="课程名称(如：语文)"/>
+            <input class="form-control" id="blog-zhang" placeholder="课程章名（如：第一章 冒险）"/>
+            <input class="form-control" id="blog-jie" placeholder="课程节名（如：第一节 开篇）"/>
+              <input class="form-control" id="blog-pic" placeholder="您所上传的图片名（如：i.jpg）"/>
+            <input class="form-control" id="blog-doc" placeholder="您所上传的文件名（如：h.doc）"/>
+            <input class="form-control" id="blog-video" placeholder="您所上传的视频链接（如：http://youku.com/ss23s）"/>
+            <textarea class="form-control" id="blog-value" placeholder="请输入课程描述" cols="40" rows="20"></textarea>
+            <button class="form-control" type="submit">发布</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- myEmotion -->
+  <div class="modal fade" id="myEmotion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">书写体会</h4>
+        </div>
+        <div class="modal-body">
+          <form id="emotion" class="input-group">
+          
+            <input class="form-control" id="emotion-title" placeholder="课程名称(如：语文)"/>
+            <input class="form-control" id="emotion-zhang" placeholder="课程章名（如：第一章 冒险）"/>
+            <input class="form-control" id="emotion-jie" placeholder="课程节名（如：第一节 开篇）"/>
+            <textarea class="form-control" id="emotion-value" placeholder="尽情书写你的体会吧！" cols="40" rows="20"></textarea>
+            <button class="form-control" type="submit">发布我的体会</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- grade -->
+  <div class="modal fade" id="myGrade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">成绩录入</h4>
+        </div>
+        <div class="modal-body">
+          <form id="grade" class="input-group">
+          
+            <input class="form-control" id="grade-title" placeholder="课程名称(如：语文)"/>
+            <input class="form-control" id="grade-zhang" placeholder="课程章名（如：第一章 冒险）"/>
+            <input class="form-control" id="grade-jie" placeholder="课程节名（如：第一节 开篇）"/>
+            <textarea class="form-control" id="grade-value" placeholder="请输入成绩单(如： 张三 87)" cols="40" rows="20"></textarea>
+            <button class="form-control" type="submit">发布</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

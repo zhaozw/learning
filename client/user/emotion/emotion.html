@@ -1,0 +1,13 @@
+<template name="emotion">
+	{{> navbar}}
+	<div class="blog-entry">
+		<h2 align="center"><strong>心得体会</strong></h2>
+	</div>
+	<div class="blog-posts-area">
+		<ul class="blog-posts">
+			{{#each emotion}}
+				{{> post id=id title=class description=description user=user zhang=zhang jie=jie}}
+			{{/each}}
+		</ul>
+	</div>
+</template>
