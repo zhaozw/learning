@@ -7,7 +7,7 @@
 
 支持[iOS](https://github.com/YangDejie/learning-ios)/[Android](https://github.com/YangDejie/learning-android)/[Web](https://github.com/YangDejie/learning-server)
 
-Demo:[Web](http://http://182.254.152.86:3000/)/[Android](https://github.com/YangDejie/learning-android/blob/master/release-unsigned.apk?raw=true)
+
 
 ###目前实现：
 
@@ -23,27 +23,23 @@ Demo:[Web](http://http://182.254.152.86:3000/)/[Android](https://github.com/Yang
 
 6.资源上传
 
+7.课程的评论，打分
+
 ### 未来实现：
 
-1.课程的评论，打分
+1.在线答题，在线生成分数
 
-2.在线答题，在线生成分数
-
-3.可录制视频
+2.可录制视频
 
 ### 目前缺陷：
 
-1.文件上传后，使用时需要填写名称
-
-2.文件名需英文
-
-3.文件不能过大
+	文件不能过大
 
 ### 联系我：
 
 i@idejie.com
 
-博客留言：[杨德杰](http://idejie.com)
+博客留言：[杨德杰](http://blog.idejie.com)
 
 github留言：[杨德杰](https://yangdejie.github.io)
 
